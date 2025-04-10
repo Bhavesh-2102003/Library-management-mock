@@ -35,7 +35,15 @@ public class AuthController {
 	
 	@PostMapping("/signup")
 	public User signUp(@RequestBody User user) throws InvalidUsernameException {
+		System.out.println("hello");
 		return authService.signUp(user);
+		
+	}
+	
+	@GetMapping("/hello")
+	public String greet()
+	{
+		return "Hello";
 	}
 	
 	@PostMapping("/login")
